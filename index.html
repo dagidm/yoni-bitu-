@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> — ዮኒ & ቢቱ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styling */
+            
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+        
+        .header-content h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 1.1;
+        }
+        
+        .header-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        .header-content h2:after {
+            background: white;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fff9fa;
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #e83e8c; /* Changed to a more romantic pink */
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #ff6b8b, #ff8e9e);
+            margin: 15px auto 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        /* Header Styling */
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://i.ibb.co/gb88HgMp/IMG-20250404-232924-454.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(232, 62, 140, 0.4) 100%); /* Updated color */
+        }
+    
+        
+        /* Couple Section */
+        .couple-section {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+        
+        .couple-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .couple-half {
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .couple-half:hover {
+            transform: translateY(-10px);
+        }
+        
+        .couple-half img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(232, 62, 140, 0.3); /* Updated color */
+            transition: all 0.3s ease;
+        }
+        
+        .couple-half:hover img {
+            box-shadow: 0 15px 40px rgba(232, 62, 140, 0.4); /* Updated color */
+        }
+        
+        .couple-half h3 {
+            margin: 20px 0 10px;
+            font-size: 1.8rem;
+        }
+        
+        .heart {
+            font-size: 3rem;
+            color: #e83e8c; /* Updated color */
+            margin: 20px 0;
+            animation: heartbeat 1.5s infinite;
+            text-shadow: 0 0 10px rgba(255, 107, 139, 0.5);
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Story Timeline */
+        .story-section {
+            padding: 80px 0;
+            background-color: #fff5f7;
+            position: relative;
+        }
+        
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #ff6b8b, #e83e8c); /* Updated color */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-badge {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            border: 3px solid white;
+            box-shadow: 0 0 0 4px #ff6b8b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-badge {
+            left: -30px;
+        }
+        
+        .timeline-panel {
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(232, 62, 140, 0.1); /* Updated color */
+            position: relative;
+        }
+        
+        .timeline-panel::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -15px;
+            border-width: 8px 0 8px 15px;
+            border-style: solid;
+            border-color: transparent transparent transparent white;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-panel::before {
+            left: -15px;
+            right: auto;
+            border-width: 8px 15px 8px 0;
+            border-color: transparent white transparent transparent;
+        }
+        
+        .timeline-heading h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.5rem;
+        }
+        
+        .date {
+            font-size: 0.9rem;
+            color: #e83e8c; /* Updated color */
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 0 auto;
+        }
+        
+        .gallery-item {
+          flex: 1 1 300px;
+          max-width: max-width: 400px;
+            height: 270px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.5s ease;
+            box-shadow: 0 5px 15px rgba(232, 62, 140, 0.1); /* Updated color */
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(232, 62, 140, 0.2); /* Updated color */
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(232, 62, 140, 0.3), transparent); /* Updated color */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        /* Wishes Section */
+        .wishes-section {
+            background: linear-gradient(135deg, #e83e8c 0%, #ff6b8b 100%); /* Updated color */
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wishes-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/white-texture.png');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .wishes-section h2 {
+            color: white;
+        }
+        
+        .wishes-section h2:after {
+            background: white;
+        }
+        
+        .wishes-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .wishes-content p {
+            font-size: 1.2rem;
+            line-height: 2;
+            font-style: italic;
+            position: relative;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .wishes-content p::before,
+        .wishes-content p::after {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.3);
+            position: absolute;
+        }
+        
+        .wishes-content p::before {
+            top: 0;
+            left: 10px;
+        }
+        
+        .wishes-content p::after {
+            bottom: -30px;
+            right: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 1rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #e83e8c, #ff6b8b); /* Updated color */
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        footer p:first-child {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        /* Popup Styling */
+        .popup {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(232, 62, 140, 0.3); /* Updated color */
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease;
+            background: linear-gradient(to bottom right, white, #fff5f7);
+            border: 1px solid rgba(232, 62, 140, 0.1); /* Updated color */
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -60%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+        
+        .popup img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(232, 62, 140, 0.2); /* Updated color */
+        }
+        
+        #playButton {
+            background: linear-gradient(to right, #e83e8c, #ff6b8b); /* Updated color */
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(232, 62, 140, 0.3); /* Updated color */
+            margin-top: 20px;
+            width: 100%;
+            max-width: 200px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        #playButton:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(232, 62, 140, 0.4); /* Updated color */
+            background: linear-gradient(to right, #ff6b8b, #e83e8c); /* Updated color */
+        }
+        
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart-shape {
+            position: absolute;
+            opacity: 0;
+            color: rgba(232, 62, 140, 0.5); /* Updated color */
+            animation: float-up 10s linear infinite;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        /* Music Player Controls */
+        .music-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .music-controls button {
+            background: #e83e8c;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .music-controls button:hover {
+            background: #ff6b8b;
+            transform: scale(1.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 3.5rem;
+            }
+            
+            .header-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline:before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 20px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-badge {
+                left: 10px;
+                right: auto;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-badge {
+                left: 10px;
+            }
+            
+            .timeline-panel::before {
+                left: -15px;
+                right: auto;
+                border-width: 8px 15px 8px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-panel::before {
+                left: -15px;
+                border-width: 8px 15px 8px 0;
+                border-color: transparent white transparent transparent;
+            }
+            
+            .couple-half img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .music-controls {
+                bottom: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="popup" class="popup">
+        <img src="https://i.ibb.co/CpzJpJkQ/IMG-20250404-232924-658.jpg" alt="Heart">
+        <h3 style="color: #e83e8c; margin-bottom: 10px;"></h3>
+        <p style="color: #666; margin-bottom: 20px;">Click below to play our special song</p>
+        <button id="playButton">Play Music</button>
+    </div>
+    <audio id="audio" loop>
+        <source src="o.mp3" type="audio/mpeg">
+        <!-- Fallback source if needed -->
+        <source src="o.mp3" type="audio/mpeg">
+    </audio>
+    
+
+    
+    <div class="floating-hearts" id="hearts-container"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <h1>ዮኒ & ቢቱ</h1>
+            <h2>Our Love Story</h2>
+        </div>
+    </header>
+
+    <section class="couple-section">
+        <div class="container">
+            <h2>Our Love Story</h2>
+            <div class="couple-wrap">
+                <div class="couple-half">
+                    <div class="groom">
+                        <img src="https://i.ibb.co/dJBNQJ0P/IMG-20250404-232925-162.jpg" alt="">
+                    </div>
+                    <div class="desc-groom">
+                        <h3>ዮኒ</h3>
+                        <p>ለመጀመርያ ጊዜ እንዳየዋት የኔ እንድትሆን ተመኘው ውብ ናት ልብን ትሰርቃለች ልቤ ላይ ያለከልካይ ያለፍቃድ በአንዴ ገባች አፈቀርኳት �ሁሌ የኔ እንድትሆን ፈለኩ እናም የኔ ሆነች የዘላለሜ ንግስቴ ፣ እናቴ ፣ ህይወቴ  አፈቅርሻለው.</p>
+                    </div>
+                </div>
+                <p class="heart"><i class="fas fa-heart"></i></p>
+                <div class="couple-half">
+                    <div class="bride">
+                        <img src="https://i.ibb.co/qF9qM5sw/IMG-20250404-232925-295.jpg" alt="">
+                    </div>
+                    <div class="desc-bride">
+                        <h3>ቢቱ</h3>
+                        <p>ከሁሉም የተለየ እይታ አስቤው የማላቀው እጁን ዘርግቶ ስሙን ሲነግረኝ ጆሮ ጋር �ሳይሆን ልቤ ላይ የሚሰማ ልዩ ንግግር ፣ ፀባዪ ፣ መልካምነቱ ከሁሉ ይልቃል ፍቅር እራሱ በሠው ይመስላል ቁርጥ እራሱን ይመስላል ደግሞም ፍቅር መያዝን ከሡ ይመኛል የኔ ልዩ መልካም የልቤ ሠው አፈቅርሀለው.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="container">
+            <h2>Our Timeless Love Story</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-badge" style="background-image: url('https://i.ibb.co/gqrrjhK/IMG-20250404-232924-983.jpg');"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3>First We Meet</h3>
+                            <span class="date">ህዳረ 27, 2013</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>ለመጀመርያ ጊዜ እንዳየዋት የኔ እንድትሆን ተመኘው ውብ ናት ልብን ትሰርቃለች ልቤ ላይ ያለከልካይ ያለፍቃድ በአንዴ ገባች አፈቀርኳት ሁሌ የኔ እንድትሆን ፈለኩ እናም የኔ ሆነች
+
+                                ከሁሉም የተለየ እይታ አስቤው የማላቀው እጁን ዘርግቶ ስሙን ሲነግረኝ ጆሮ ጋር ሳይሆን ልቤ ላይ የሚሰማ ልዩ ንግግር ፣ ፀባዪ ፣ መልካምነቱ ከሁሉ ይልቃል ፍቅር እራሱ በሠው ይመስላል ቁርጥ እራሱን ይመስላል ደጋግሞ ፍቅር መያዝን ከሡ ያስመኛል.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge" style="background-image: url('https://i.ibb.co/zTWK4Gjd/IMG-20250404-232925-261.jpg');"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3>First Date</h3>
+                            <span class="date">ህዳረ 27, 2013</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                የፍላጎት ግፊት ፎቅር እውር ያረጋል እሱ በፈለገ መንገድ ነው �ሚመራህ ወደድክም ጠላህም ትመራለህ። አቤት ደስ ሲል ደፍርም ያረጋል የልብሳችን ጫፍ ሲነካካ እንደተጎተተ ሰው ስቦ ያቀርባል መሽኮርመም ያመጣል አይን ሲገጣጠም ልብ በደስታ ይመታል በቀን በቀን አዲስ ስሜት ያስተናግዳል መሽቶ መለየት ወደየቤት ስኬድ ያ ሁሉ ደስታ የት ይሄዳል? የደስታ ምንጭ ከሌለ ከየት ይመጣል ቀመተቃቀፍ የታተመውን ጠረን ይዞ መፅናናትን ይሻል ደስ የሚያሠኝ ህይወት እንዃን ሰመጥኩ መውጣትን አልሻም.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-badge" style="background-image: url('https://i.ibb.co/XZ21BjNZ/IMG-20250404-232919-051.jpg');"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h3>In A Relationship</h3>
+                            <span class="date">የካቲት 16 እሮብ 2013 </span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                የደስታ ብዛት መተፋፈርን ሁሉ ያመጣል አዲስ ደስ የሚል ጣፋጭ በፍቅር ክንም ማለት, ማበድ, እራስን መሣት(በፍቅር), የመንሣፈፍ ያክል ቅልጥ ብሎ ሁሉንም ሀሣቦች ረስቼ 1 ሠው ብቻ ማሠብ ልክ ክንድህ ለማቀፍ ተዘርግቶ ያሠው ስታቅፍ የንዝረት ስሜት ፣ የልብ ምት መቀየር በደስታ ተውጦ አለምን መርሣት ምነኛ መታደል ነው ልክ አፈቅርሻለው የሚል ቃል ሲመጣ አቤት አቤት በልቤ ስለው ቀሎኝ ለአፊ ስለው ምነው ተለየ ይበልጥ በጣም ደስ የሚለው ደግሞ በምላሹ አፈቅርሀለው መጣ ሁሉም ተቀየረ ነገር አለሙ ይበልጡን ተረሳ ደጋግሞ ያለማቋረጥ መስማትን ተመኘው አለሜን ቀያሪ �ጦታዪ የፍቅር ትርጉሜ I love you so much.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Treasured Moments of Love</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/zTWK4Gjd/IMG-20250404-232925-261.jpg');width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)"></div>
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/gb88HgMp/IMG-20250404-232924-454.jpg');width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)"></div>
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/xSDyJTMm/IMG-20250404-232924-889.jpg');width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)"></div>
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/CpzJpJkQ/IMG-20250404-232924-658.jpg');width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)"></div>
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/gqrrjhK/IMG-20250404-232924-983.jpg');width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1)"></div>
+                <div class="gallery-item" style="background-image: url('https://i.ibb.co/XZ21BjNZ/IMG-20250404-232919-051.jpg'); width: 100%; height: 500px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="wishes-section">
+        <div class="container">
+            <h2>My Wishes For Us</h2>
+            <div class="wishes-content">
+                <p>I vow to love you more with each sunrise than I did at sunset, to cherish every laugh line and silver strand as beautiful testaments to our journey. I promise to be your shelter in storms and your partner in adventures, to listen with my heart and speak with love. May our love grow deeper than the ocean and higher than the stars, weathering all of life's seasons with grace. I dream of growing old with you, my hand forever in yours, our love story inspiring generations. You are my greatest blessing, my sweetest dream come true, and the love that makes my soul sing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Forever Yours</p>
+            <p></p>
+            <p>ዮኒ & ቢቱ 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Music player
+        const audio = document.getElementById('audio');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const musicControls = document.getElementById('musicControls');
+        
+        document.getElementById('playButton').addEventListener('click', function() {
+            audio.play().catch(e => {
+                // Fallback for browsers that block autoplay
+                console.log("Audio playback failed:", e);
+            });
+            document.getElementById('popup').style.display = 'none';
+            musicControls.style.display = 'flex';
+        });
+        
+        // Music controls functionality
+        playPauseBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            } else {
+                audio.pause();
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+            }
+        });
+        
+        // Some mobile browsers require a user interaction first
+        document.addEventListener('click', function() {
+            // This empty handler helps enable audio playback on iOS
+        }, { once: true });
+        
+        // Create floating hearts
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const colors = ['#e83e8c', '#ff6b8b', '#ff8e9e', '#ffb3c1'];
+            
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-shape');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.color = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(heart);
+            }
+        }
+        
+        // Initialize
+        window.onload = function() {
+            createHearts();
+            
+            // Try to play music automatically (may not work due to browser restrictions)
+            setTimeout(() => {
+                audio.play().catch(e => {
+                    console.log("Autoplay prevented, showing popup");
+                });
+            }, 1000);
+        };
+    </script>
+</body>
+</html>
